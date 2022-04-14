@@ -19,7 +19,7 @@ class BonModel extends ChangeNotifier {
       _selectedBons.fold(0, (total, bon) => total + bon.value);
 
   void selectBon(Bon bon) {
-    _selectedBons.add(bon);
+    _selectedBons.insert(0, bon);
     notifyListeners();
   }
 
