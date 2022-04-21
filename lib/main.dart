@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:bonbon/common/theme.dart';
 import 'package:bonbon/model/bon.dart';
 import 'package:bonbon/pages/picker.dart';
@@ -20,6 +22,12 @@ class BonBon extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      scrollBehavior: ScrollConfiguration.of(context).copyWith(
+        dragDevices: {
+          PointerDeviceKind.touch,
+          PointerDeviceKind.mouse,
+        },
+      ),
       title: 'BonBon',
       theme: appTheme,
       initialRoute: '/',
