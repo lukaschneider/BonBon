@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:bonbon/common/theme.dart';
 import 'package:bonbon/model/bon.dart';
+import 'package:bonbon/pages/editor.dart';
 import 'package:bonbon/pages/picker.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -33,6 +34,7 @@ class BonBon extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const PickerPage(),
+        '/edit': (context) => const EditorPage(),
       },
     );
   }

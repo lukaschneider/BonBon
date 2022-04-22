@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 
 class BonWidget extends StatelessWidget {
   const BonWidget({
@@ -29,9 +30,11 @@ class BonWidget extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(bottom: 8.0),
               child: Text(
-                '${value.toStringAsPrecision(3)} EUR',
+                '${value.toStringAsFixed(2)} EUR',
                 style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                      color: Colors.black.withOpacity(0.5),
+                      color: useWhiteForeground(color)
+                          ? Colors.white.withOpacity(0.5)
+                          : Colors.black.withOpacity(0.5),
                       fontWeight: FontWeight.bold,
                     ),
               ),
@@ -40,10 +43,11 @@ class BonWidget extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Text(
                 description,
-                style: Theme.of(context)
-                    .textTheme
-                    .bodyLarge
-                    ?.copyWith(color: Colors.black),
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                      color: useWhiteForeground(color)
+                          ? Colors.white
+                          : Colors.black,
+                    ),
                 textAlign: TextAlign.center,
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,

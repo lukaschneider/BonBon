@@ -16,6 +16,14 @@ class _PickerPageState extends State<PickerPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('BonBon'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.edit_note),
+            onPressed: () {
+              Navigator.pushNamed(context, '/edit');
+            },
+          ),
+        ],
       ),
       body: Column(
         children: const [
