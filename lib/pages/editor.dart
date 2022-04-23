@@ -112,7 +112,10 @@ class _EditorPageState extends State<EditorPage> {
                   onChanged: (String value) {
                     futureBon.value = double.parse(value);
                   },
-                  keyboardType: TextInputType.number,
+                  keyboardType: const TextInputType.numberWithOptions(
+                    signed: false,
+                    decimal: true,
+                  ),
                 ),
               ),
               Padding(
