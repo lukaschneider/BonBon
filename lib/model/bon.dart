@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 class BonModel extends ChangeNotifier {
   List<Bon> _availableBons = [
-    Bon(Colors.red.shade500, 'Glühwein', 3.20),
-    Bon(Colors.pink.shade100, 'Tee mit Rum', 3.20),
+    Bon(Colors.red.shade500, 'Glühwein', 3.50),
+    Bon(Colors.pink.shade100, 'Tee mit Rum', 3.50),
     Bon(Colors.yellow.shade600, 'Tee', 2.50),
     Bon(Colors.green.shade200, 'Bratapfellikör mit Sahne', 4.00),
-    Bon(Colors.blue.shade300, 'Waffel', 2.50),
-    Bon(Colors.purple.shade300, 'Waffel mit Sahne', 3.00),
-    Bon(Colors.grey.shade300, 'Tassenpfand', 2.00),
+    Bon(Colors.blue.shade300, 'Waffel', 3.00),
+    Bon(Colors.purple.shade300, 'Waffel mit Sahne', 3.50),
+    Bon(Colors.grey.shade300, 'Tassenpfand', 3.50),
   ];
 
   List<Bon> get availableBons => _availableBons;
